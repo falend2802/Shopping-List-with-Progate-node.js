@@ -36,7 +36,8 @@ app.post('/create', (req, res) => {
    });
 });
 
-app.post('/delete', (req, res) => {
+app.post('/delete/:id', (req, res) => {
+  console.log(req.params.id);
   res.redirect('/index');
 });
 
