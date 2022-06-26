@@ -56,7 +56,12 @@ app.get('/edit/:id', (req, res) => {
 });
 
 app.post('/update/:id', (req, res) => {
-  res.redirect('/index');
+  connection.query(
+    'UPDATE items SET name=? WHERE id=?',
+    [req.body.itemName, req.params.id],
+    (error, results) => {
+      res.redirect('/index');
+    });
 });
 
 app.listen(3000);
