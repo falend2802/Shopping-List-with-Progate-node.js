@@ -15,7 +15,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/index', (req, res) => {
-  res.render('index.ejs');
+  connection.query(
+    'SELECT * FROM items', (error, results) => {
+      console.log(results);
+      res.render('index.ejs');
+    });
 });
 
 app.listen(3000);
