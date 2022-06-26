@@ -23,8 +23,15 @@
         <ul class="table-body">
           <% items.forEach((item) => { %>
             <li>
-              <span class="id-column"><%= item.id %></span>
-              <span class="name-column"><%= item.name %></span>
+              <div class="item-data">
+                <span class="id-column"><%= item.id %></span>
+                <span class="name-column"><%= item.name %></span>
+              </div>
+              <div class="item-menu">
+                <form action="/delete" method="post">
+                  <input type="submit" value="Delete">
+                </form>
+              </div>
             </li>
           <% }) %>
         </ul>
