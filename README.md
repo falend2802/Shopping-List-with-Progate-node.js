@@ -4,6 +4,8 @@ Source code for reference
 
 ==========================================================
 
+Run index.ejs (location: views/index.ejs)
+
 Note: 
 
 With database, you need to install node.js and mysql package in terminal.
