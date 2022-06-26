@@ -11,7 +11,10 @@ Note:
 With database, you need to install node.js and mysql package in terminal.
 
 node.js: npm install node
+===========================
 mysql: npm install mysql
+==========================================
 
 table name: items
+==========================
 columns: id, name
