@@ -14,4 +14,4 @@ node.js: npm install node
 mysql: npm install mysql
 
 table name: items
-columns: id, name, itemName
+columns: id, name
