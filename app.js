@@ -17,12 +17,19 @@ app.get('/', (req, res) => {
 app.get('/index', (req, res) => {
   connection.query(
     'SELECT * FROM items', (error, results) => {
-      res.render('index.ejs', {items: results);
+      res.render('index.ejs', {items: results});
     });
 });
   
 app.get('/new', (req, res) => {
   res.render('new.ejs');
+});
+  
+app.post('/create', (req, res) => {
+  connection.query(
+    'SELECT * FROM items', (error, results) => {
+      res.render('index.ejs', {items: results});
+    });
 });
 
 app.listen(3000);
