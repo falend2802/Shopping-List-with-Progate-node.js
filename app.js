@@ -17,8 +17,7 @@ app.get('/', (req, res) => {
 app.get('/index', (req, res) => {
   connection.query(
     'SELECT * FROM items', (error, results) => {
-      console.log(results);
-      res.render('index.ejs');
+      res.render('index.ejs', {items: results);
     });
 });
 
