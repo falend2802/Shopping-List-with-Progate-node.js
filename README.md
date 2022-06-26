@@ -6,7 +6,7 @@ Source code for reference
 
 Note: 
 
-You need to install node.js and mysql package in terminal.
+With database, you need to install node.js and mysql package in terminal.
 
 node.js: npm install node
 mysql: npm install mysql
