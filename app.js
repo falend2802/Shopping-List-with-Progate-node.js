@@ -28,11 +28,15 @@ app.get('/new', (req, res) => {
 });
   
 app.post('/create', (req, res) => {
-  console.log(req.body.itemName);
   connection.query(
-    'SELECT * FROM items', (error, results) => {
-      res.render('index.ejs', {items: results});
-    });
+    'INSERT INTO items (name) VALUES (?)',
+    [req.body.itemName],
+    (error, results) => {
+      connection.query(
+        'SELECT * FROM items', (error, results) => {
+          res.render('index.ejs', {items: results});
+      });
+   });
 });
 
 app.listen(3000);
